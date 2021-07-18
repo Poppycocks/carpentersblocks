@@ -21,5 +21,9 @@ public class CarpentersBlocks {
     public CarpentersBlocks() {
     	ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Configuration.COMMON_SPEC);
 	}
+
+	private void register(){
+
+	}
     
 }

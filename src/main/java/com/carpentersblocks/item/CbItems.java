@@ -16,6 +16,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.IForgeRegistry;
 
 @Mod.EventBusSubscriber(modid = CarpentersBlocks.MOD_ID, bus = Bus.MOD)
 public class CbItems {
@@ -62,14 +63,16 @@ public class CbItems {
     
     @SubscribeEvent
     public static void onRegisterItemEvent(RegistryEvent.Register<Item> event) {
-    	// applicator
+		IForgeRegistry<Item> registry = event.getRegistry();
+
+		// applicator
     	{
     		Item.Properties properties = new Item.Properties()
     				.tab(CarpentersBlocks.ITEM_GROUP)
     				.stacksTo(1);
     		itemApplicator = new ItemCarpentersApplicator(properties)
 					.setRegistryName(REGISTRY_NAME_APPLICATOR);
-			event.getRegistry().register(itemApplicator);
+			registry.register(itemApplicator);
     	}
     	// barrier
     	{
@@ -78,7 +81,7 @@ public class CbItems {
     				.stacksTo(1);
 			blockItemBarrier = new BlockItem(CbBlocks.blockBarrier, properties);
 			blockItemBarrier.setRegistryName(CbBlocks.blockBarrier.getRegistryName());
-			event.getRegistry().register(blockItemBarrier);
+			registry.register(blockItemBarrier);
     	}
 		// bed
     	{
@@ -87,7 +90,7 @@ public class CbItems {
     				.stacksTo(1);
     		itemBed = new ItemCarpentersBed(properties)
 					.setRegistryName(REGISTRY_NAME_BED);
-			event.getRegistry().register(itemBed);
+			registry.register(itemBed);
     	}
 		// block
     	{
@@ -96,7 +99,7 @@ public class CbItems {
     				.stacksTo(1);
 			blockItemBlock = new BlockItem(CbBlocks.blockBlock, properties);
 			blockItemBlock.setRegistryName(CbBlocks.blockBlock.getRegistryName());
-			event.getRegistry().register(blockItemBlock);
+			registry.register(blockItemBlock);
     	}
     	// button
     	{
@@ -105,7 +108,7 @@ public class CbItems {
     				.stacksTo(1);
 			blockItemButton = new BlockItem(CbBlocks.blockButton, properties);
 			blockItemButton.setRegistryName(CbBlocks.blockButton.getRegistryName());
-			event.getRegistry().register(blockItemButton);
+			registry.register(blockItemButton);
     	}
 		// chisel
     	{
@@ -117,7 +120,7 @@ public class CbItems {
     		}
     		itemChisel = new ItemCarpentersHammer(properties)
 					.setRegistryName(REGISTRY_NAME_CHISEL);
-			event.getRegistry().register(itemChisel);
+			registry.register(itemChisel);
     	}
 		// collapsible block
     	{
@@ -126,7 +129,7 @@ public class CbItems {
     				.stacksTo(1);
 			blockItemCollapsibleBlock = new BlockItem(CbBlocks.blockCollapsibleBlock, properties);
 			blockItemCollapsibleBlock.setRegistryName(CbBlocks.blockCollapsibleBlock.getRegistryName());
-			event.getRegistry().register(blockItemCollapsibleBlock);
+			registry.register(blockItemCollapsibleBlock);
     	}
 		// daylight sensor
     	{
@@ -135,7 +138,7 @@ public class CbItems {
     				.stacksTo(1);
     		blockItemDaylightSensor = new BlockItem(CbBlocks.blockDaylightSensor, properties);
 			blockItemDaylightSensor.setRegistryName(CbBlocks.blockDaylightSensor.getRegistryName());
-			event.getRegistry().register(blockItemDaylightSensor);
+			registry.register(blockItemDaylightSensor);
 	    }
 		// door
     	{
@@ -144,7 +147,7 @@ public class CbItems {
     				.stacksTo(3);
     		itemDoor = new ItemCarpentersDoor(properties)
 					.setRegistryName(REGISTRY_NAME_DOOR);
-			event.getRegistry().register(itemDoor);
+			registry.register(itemDoor);
     	}
 		// flower pot
     	{
@@ -153,7 +156,7 @@ public class CbItems {
     				.stacksTo(1);
 			blockItemFlowerPot = new BlockItem(CbBlocks.blockFlowerPot, properties);
 			blockItemFlowerPot.setRegistryName(CbBlocks.blockFlowerPot.getRegistryName());
-			event.getRegistry().register(blockItemFlowerPot);
+			registry.register(blockItemFlowerPot);
 	    }
 		// garage door
 		{
@@ -162,7 +165,7 @@ public class CbItems {
     				.stacksTo(1);
 			blockItemGarageDoor = new BlockItem(CbBlocks.blockGarageDoor, properties);
 			blockItemGarageDoor.setRegistryName(CbBlocks.blockGarageDoor.getRegistryName());
-			event.getRegistry().register(blockItemGarageDoor);
+			registry.register(blockItemGarageDoor);
 	    }
 		// gate
 		{
@@ -171,7 +174,7 @@ public class CbItems {
     				.stacksTo(1);
 			blockItemGate = new BlockItem(CbBlocks.blockGate, properties);
 			blockItemGate.setRegistryName(CbBlocks.blockGate.getRegistryName());
-			event.getRegistry().register(blockItemGate);
+			registry.register(blockItemGate);
 	    }
 		// hammer
     	{
@@ -183,7 +186,7 @@ public class CbItems {
     		}
 			itemHammer = new ItemCarpentersHammer(properties)
 					.setRegistryName(REGISTRY_NAME_HAMMER);
-			event.getRegistry().register(itemHammer);
+			registry.register(itemHammer);
     	}
 		// hatch
     	{
@@ -192,7 +195,7 @@ public class CbItems {
     				.stacksTo(1);
 			blockItemHatch = new BlockItem(CbBlocks.blockHatch, properties);
 			blockItemHatch.setRegistryName(CbBlocks.blockHatch.getRegistryName());
-			event.getRegistry().register(blockItemHatch);
+			registry.register(blockItemHatch);
 	    }
 		// ladder
 		{
@@ -201,7 +204,7 @@ public class CbItems {
     				.stacksTo(1);
 			blockItemLadder = new BlockItem(CbBlocks.blockLadder, properties);
 			blockItemLadder.setRegistryName(CbBlocks.blockLadder.getRegistryName());
-			event.getRegistry().register(blockItemLadder);
+			registry.register(blockItemLadder);
 	    }
 		// lever
 		{
@@ -210,7 +213,7 @@ public class CbItems {
     				.stacksTo(1);
 			blockItemLever = new BlockItem(CbBlocks.blockLever, properties);
 			blockItemLever.setRegistryName(CbBlocks.blockLever.getRegistryName());
-			event.getRegistry().register(blockItemLever);
+			registry.register(blockItemLever);
 	    }
 		// pressure plate
 		{
@@ -219,7 +222,7 @@ public class CbItems {
     				.stacksTo(1);
 			blockItemPressurePlate = new BlockItem(CbBlocks.blockPressurePlate, properties);
 			blockItemPressurePlate.setRegistryName(CbBlocks.blockPressurePlate.getRegistryName());
-			event.getRegistry().register(blockItemPressurePlate);
+			registry.register(blockItemPressurePlate);
 	    }
 		// safe
 		{
@@ -228,28 +231,28 @@ public class CbItems {
     				.stacksTo(1);
 			blockItemSafe = new BlockItem(CbBlocks.blockSafe, properties);
 			blockItemSafe.setRegistryName(CbBlocks.blockSafe.getRegistryName());
-			event.getRegistry().register(blockItemSafe);
+			registry.register(blockItemSafe);
 	    }
 		// slope
 		{
 			Item.Properties properties = new Item.Properties()
     				.tab(CarpentersBlocks.ITEM_GROUP)
     				.stacksTo(64);
-			event.getRegistry().register(blockItemSlopeInvertedPrism = (BlockItem) new BlockItem(CbBlocks.blockSlopeInvertedPrism, properties)
+			registry.register(blockItemSlopeInvertedPrism = (BlockItem) new BlockItem(CbBlocks.blockSlopeInvertedPrism, properties)
 		    		.setRegistryName(CbBlocks.REGISTRY_NAME_SLOPE_INVERTED_PRISM));
-			event.getRegistry().register(blockItemSlopeObliqueExterior = (BlockItem) new BlockItem(CbBlocks.blockSlopeObliqueExterior, properties)
+			registry.register(blockItemSlopeObliqueExterior = (BlockItem) new BlockItem(CbBlocks.blockSlopeObliqueExterior, properties)
 		    		.setRegistryName(CbBlocks.REGISTRY_NAME_SLOPE_OBLIQUE_EXTERIOR));
-			event.getRegistry().register(blockItemSlopeObliqueInterior = (BlockItem) new BlockItem(CbBlocks.blockSlopeObliqueInterior, properties)
+			registry.register(blockItemSlopeObliqueInterior = (BlockItem) new BlockItem(CbBlocks.blockSlopeObliqueInterior, properties)
 		    		.setRegistryName(CbBlocks.REGISTRY_NAME_SLOPE_OBLIQUE_INTERIOR));
-			event.getRegistry().register(blockItemSlopePrism = (BlockItem) new BlockItem(CbBlocks.blockSlopePrism, properties)
+			registry.register(blockItemSlopePrism = (BlockItem) new BlockItem(CbBlocks.blockSlopePrism, properties)
 		    		.setRegistryName(CbBlocks.REGISTRY_NAME_SLOPE_PRISM));
-			event.getRegistry().register(blockItemSlopePrismWedge = (BlockItem) new BlockItem(CbBlocks.blockSlopePrismWedge, properties)
+			registry.register(blockItemSlopePrismWedge = (BlockItem) new BlockItem(CbBlocks.blockSlopePrismWedge, properties)
 		    		.setRegistryName(CbBlocks.REGISTRY_NAME_SLOPE_PRISM_WEDGE));
-			event.getRegistry().register(blockItemSlopeWedge = (BlockItem) new BlockItem(CbBlocks.blockSlopeWedge, properties)
+			registry.register(blockItemSlopeWedge = (BlockItem) new BlockItem(CbBlocks.blockSlopeWedge, properties)
 		    		.setRegistryName(CbBlocks.REGISTRY_NAME_SLOPE_WEDGE));
-			event.getRegistry().register(blockItemSlopeWedgeExterior = (BlockItem) new BlockItem(CbBlocks.blockSlopeWedgeExterior, properties)
+			registry.register(blockItemSlopeWedgeExterior = (BlockItem) new BlockItem(CbBlocks.blockSlopeWedgeExterior, properties)
 		    		.setRegistryName(CbBlocks.REGISTRY_NAME_SLOPE_WEDGE_EXTERIOR));
-			event.getRegistry().register(blockItemSlopeWedgeInterior = (BlockItem) new BlockItem(CbBlocks.blockSlopeWedgeInterior, properties)
+			registry.register(blockItemSlopeWedgeInterior = (BlockItem) new BlockItem(CbBlocks.blockSlopeWedgeInterior, properties)
 		    		.setRegistryName(CbBlocks.REGISTRY_NAME_SLOPE_WEDGE_INTERIOR));
 			slopeBlockItemSubTypes.add(blockItemSlopeWedge);
 			slopeBlockItemSubTypes.add(blockItemSlopeWedgeInterior);
@@ -264,10 +267,10 @@ public class CbItems {
 		{
 			Item.Properties properties = new Item.Properties()
     				.tab(CarpentersBlocks.ITEM_GROUP)
-    				.stacksTo(1);
+    				.stacksTo(64);
 			blockItemStairs = new BlockItem(CbBlocks.blockStairs, properties);
 			blockItemStairs.setRegistryName(CbBlocks.blockStairs.getRegistryName());
-			event.getRegistry().register(blockItemStairs);
+			registry.register(blockItemStairs);
 	    }
 		// tile
     	{
@@ -276,7 +279,7 @@ public class CbItems {
     				.stacksTo(64);
 			itemTile = new ItemCarpentersHammer(properties)
 					.setRegistryName(REGISTRY_NAME_TILE);
-			event.getRegistry().register(itemTile);
+			registry.register(itemTile);
     	}
 		// torch
     	{
@@ -285,14 +288,14 @@ public class CbItems {
     				.stacksTo(1);
 			blockItemTorch = new BlockItem(CbBlocks.blockTorch, properties);
 			blockItemTorch.setRegistryName(CbBlocks.blockTorch.getRegistryName());
-			event.getRegistry().register(blockItemTorch);
+			registry.register(blockItemTorch);
     	}
     }
     
     /**
      * Gets next slope sub type.
      * 
-     * @param registryName the current registry name
+     * @param currentRegistryName the current registry name
      * @return the next slope block item
      */
     public static BlockItem getNextSlopeSubType(String currentRegistryName) {
@@ -302,7 +305,7 @@ public class CbItems {
     /**
      * Gets previous slope sub type.
      * 
-     * @param registryName the current registry name
+     * @param currentRegistryName the current registry name
      * @return the previous slope block item
      */
 	public static BlockItem getPreviousSlopeSubType(String currentRegistryName) {
@@ -312,7 +315,7 @@ public class CbItems {
 	/**
 	 * Gets next or previous slope sub type.
 	 * 
-	 * @param currentBlockItem the currently held block item
+	 * @param currentRegistryName the currently held block item
 	 * @param next <code>true</code> to get next subtype and <code>false</code> gets previous subtype
 	 */
 	private static BlockItem getIndexedSlopeSubType(String currentRegistryName, boolean next) {

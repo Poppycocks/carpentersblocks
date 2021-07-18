@@ -1,6 +1,6 @@
 package com.carpentersblocks.item;
 
-import com.carpentersblocks.api.ICarpentersHammer;
+import com.carpentersblocks.ICarpentersHammer;
 import com.carpentersblocks.block.AbstractCoverableBlock;
 
 import net.minecraft.block.BlockState;

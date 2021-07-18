@@ -1,6 +1,6 @@
 package com.carpentersblocks.item;
 
-import com.carpentersblocks.api.ICarpentersChisel;
+import com.carpentersblocks.ICarpentersChisel;
 import com.carpentersblocks.block.AbstractCoverableBlock;
 
 import net.minecraft.block.BlockState;

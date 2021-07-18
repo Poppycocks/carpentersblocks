@@ -1,4 +1,4 @@
-package com.carpentersblocks.api;
+package com.carpentersblocks;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.Hand;

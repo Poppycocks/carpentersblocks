@@ -38,7 +38,7 @@ public class BlockCarpentersSlope extends AbstractWaterLoggableBlock {
      * Alters block direction.
      */
     protected boolean onHammerLeftClick(CbTileEntity cbTileEntity, PlayerEntity playerEntity) {
-        //SlopeData.rotate(cbTileEntity, EventHandler.getRayTraceResult().getDirection().getAxis());
+        // SlopeData.rotate(cbTileEntity, EventHandler.getRayTraceResult().getDirection().getAxis());
         return true;
     }
 

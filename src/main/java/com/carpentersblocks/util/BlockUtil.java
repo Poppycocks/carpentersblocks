@@ -1,9 +1,9 @@
 package com.carpentersblocks.util;
 
+import com.carpentersblocks.IWrappableBlock;
 import org.apache.logging.log4j.Level;
 
 import com.carpentersblocks.ModLogger;
-import com.carpentersblocks.api.IWrappableBlock;
 import com.carpentersblocks.block.AbstractCoverableBlock;
 import com.carpentersblocks.config.Configuration;
 import com.carpentersblocks.nbt.AttributeHelper;

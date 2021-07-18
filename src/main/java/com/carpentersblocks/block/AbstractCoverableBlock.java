@@ -7,8 +7,8 @@ import java.util.Set;
 
 import javax.annotation.Nullable;
 
-import com.carpentersblocks.api.ICarpentersChisel;
-import com.carpentersblocks.api.ICarpentersHammer;
+import com.carpentersblocks.ICarpentersChisel;
+import com.carpentersblocks.ICarpentersHammer;
 import com.carpentersblocks.client.renderer.RenderConstants;
 import com.carpentersblocks.config.Configuration;
 import com.carpentersblocks.nbt.CbTileEntity;

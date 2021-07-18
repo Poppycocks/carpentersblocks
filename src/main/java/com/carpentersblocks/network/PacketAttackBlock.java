@@ -3,8 +3,8 @@ package com.carpentersblocks.network;
 import java.util.function.Supplier;
 
 import com.carpentersblocks.CarpentersBlocks;
-import com.carpentersblocks.api.ICarpentersChisel;
-import com.carpentersblocks.api.ICarpentersHammer;
+import com.carpentersblocks.ICarpentersChisel;
+import com.carpentersblocks.ICarpentersHammer;
 import com.carpentersblocks.block.AbstractCoverableBlock;
 import com.carpentersblocks.util.BlockUtil;
 

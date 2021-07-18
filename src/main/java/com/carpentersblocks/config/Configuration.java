@@ -562,14 +562,12 @@ public class Configuration {
 					.comment("This maps items to overlays. Items are defined by a resource name, separator '" + OverlayHandler.OVERLAY_TYPE_SEPARATOR + "' and overlay type.",
 							"Supported overlay types are: " + String.join(Stream.of(Overlay.values()).map(o -> o.name()).collect(Collectors.joining(", "))))
 					.translation(CarpentersBlocks.MOD_ID + ".config." + "overlayItemList")
-					.define("overlayItemList", Arrays.asList(new String[] {
-							Items.WHEAT_SEEDS.getRegistryName().toString() + OverlayHandler.OVERLAY_TYPE_SEPARATOR + Overlay.grass.name(),
+					.define("overlayItemList", Arrays.asList(Items.WHEAT_SEEDS.getRegistryName().toString() + OverlayHandler.OVERLAY_TYPE_SEPARATOR + Overlay.grass.name(),
 							Items.SNOWBALL.getRegistryName().toString() + OverlayHandler.OVERLAY_TYPE_SEPARATOR + Overlay.snow.name(),
 							Items.STRING.getRegistryName().toString() + OverlayHandler.OVERLAY_TYPE_SEPARATOR + Overlay.web.name(),
 							Items.VINE.getRegistryName().toString() + OverlayHandler.OVERLAY_TYPE_SEPARATOR + Overlay.vine.name(),
 							Items.WHEAT.getRegistryName().toString() + OverlayHandler.OVERLAY_TYPE_SEPARATOR + Overlay.hay.name(),
-							Items.BROWN_MUSHROOM.getRegistryName().toString() + OverlayHandler.OVERLAY_TYPE_SEPARATOR + Overlay.mycelium.name(),
-					}));
+							Items.BROWN_MUSHROOM.getRegistryName().toString() + OverlayHandler.OVERLAY_TYPE_SEPARATOR + Overlay.mycelium.name()));
 		    
 		    builder.pop();
 		    builder.push("compatibility");
